@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --bg-color: #ebf0f4;
+  --bg-secondary-color: #0f2444;
+
+  --primary-color: #da924e;
+
+  --text-primary-color: #3f3f3f;
+  --text-secondary-color: #0f2444;
+
+  --attachment-title: #676767;
+  --text-li-color: #777777;
+
+  --border-color: #079d49;
+
+  --primary-font: "Roboto Condensed", sans-serif;
+  --secondary-font: "Hind Siliguri", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background: var(--bg-color);
+  font-family: var(--primary-font);
+  color: var(--text-primary-color);
+}
+
+/* Common Styles */
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+section {
+  padding: 70px 0;
+}
+
+.section-container {
+  padding: 3rem 2.5rem;
+}
+
+.logo {
+  max-width: 45px;
+}
+
+/* Header CSS */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 700;
+  color: #da924e;
+  text-transform: uppercase;
+}
+
+.navbar-brand:hover {
+  color: #da924e;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  border-bottom: 2px solid black;
+}
+
+.offcanvas.offcanvas-end {
+  width: 35%;
+}
+
+.offcanvas-header {
+  justify-content: flex-end;
+}
+
+.offcanvas-header .btn-close {
+  padding-right: 20px;
+}
+
+/* Hero Image CSS */
+.hero-image {
+  /* background-image: url("../../../assets/images/hero-image/train-stopped-railway.jpg"); */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* position: relative; */
+}
+
+#hero-image-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Steps CSS */
+.steps-container {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step-counter p {
+  font-size: 1rem;
+  line-height: 22px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.steps-container i {
+  font-size: 35px;
+}
+
+.steps-container-text {
+  font-size: 0.8571428571rem;
+  font-weight: 400;
+  line-height: 18px;
+  width: 75%;
+}
+
+/* FAQ's CSS */
+.accordion {
+  --bs-accordion-bg: transparent;
+}
+
+.accordion-button:focus,
+.accordion-button:not(.collapsed) {
+  box-shadow: none;
+  background-color: transparent;
+}
+
+/* Payment Methods CSS */
+.payment-methods {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.payment-methods img {
+  max-height: 43px;
+  max-width: 100%;
+}
+
+#payment-section {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* Contact Us CSS */
+.sub-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sub-heading h6 {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.sub-heading small {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: var(--text-secondary-color);
+  opacity: 0.5;
+}
+
+.payment-types-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.payment-type {
+  text-align: center;
+}
+
+.contact-number {
+  color: var(--primary-color);
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.service-name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.divider {
+  width: 1px;
+  height: 50px;
+  background: var(--text-primary-color);
+  opacity: 0.5;
+}
+
+.attachments {
+  color: var(--text-li-color);
+}
+
+.attachment-title {
+  color: var(--attachment-title);
+  font-weight: 600;
+}
+
+/* Footer CSS */
+footer {
+  background: #f6f9ff;
+  border-top: 2px solid #079d49;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.legal-details-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 10px;
+  background: var(--bg-secondary-color);
+  opacity: 0.5;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tag-line-text {
+  font-family: var(--secondary-font);
+  color: #006747;
+}

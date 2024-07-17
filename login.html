@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Bangladesh Railway E-Ticketing Service</title>
+
+    <!-- Favicons -->
+    <link href="./assets/images/fav-icon/favicon.ico" rel="icon" />
+
+    <!-- Bootstrap CSS File -->
+    <link
+      rel="stylesheet"
+      href="./assets/css/bootstrap-5/css/bootstrap.min.css"
+    />
+
+    <!-- Bootstrap Icon CSS File -->
+    <link
+      rel="stylesheet"
+      href="./assets/css/bootstrap-icons/font/bootstrap-icons.css"
+    />
+
+    <!-- Fontawesome Kit -->
+    <script
+      src="https://kit.fontawesome.com/86bc96ac49.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme/theme.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar Starts Here -->
+    <header>
+      <nav class="navbar bg-white navbar-expand-lg shadow-lg">
+        <div class="container nav-container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="./assets/images/logo/bangladesh-railway.png"
+              alt="Bangladesh Railway Logo"
+              class="d-inline-block align-text-top logo"
+            />
+            bangladesh railway
+          </a>
+
+          <div id="theme-change-mobile">
+            <div class="d-flex align-items-center">
+              <button
+                class="navbar-toggler border-0 bg-transparent"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+                aria-label="Toggle navigation"
+              >
+                <i class="fa-solid fa-bars-staggered"></i>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <button
+                type="button"
+                class="btn-close custom-color"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul
+                class="navbar-nav justify-content-end flex-grow-1 align-items-center"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="login.html"
+                    >Login</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="register.html"
+                    >Register</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="train-information.html"
+                    >Train Information</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="contact-us.html"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Navigation Bar Ends Here -->
+
+    <!-- Wrapper Starts Here -->
+    <div class="wrapper">
+      <!-- Main Content Starts Here -->
+      <div class="content">
+        <!-- Main Container Starts Here -->
+        <div class="container section-container">
+          <div class="row">
+            <div class="col-lg-3 d-none d-lg-block"></div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+              <div class="card border-0 shadow-sm">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="p-5">
+                      <form
+                        action=""
+                        class="auth-form needs-validation"
+                        id="login-form"
+                        novalidate
+                      >
+                        <div class="form-floating mb-3">
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="mobile-number"
+                            placeholder="Enter Your Mobile Number"
+                            required
+                          />
+                          <label for="mobile-number"
+                            >Enter Your Mobile Number</label
+                          >
+                          <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="password"
+                            placeholder="Enter Your Password"
+                            required
+                          />
+                          <label for="mobile-number">Enter Your Password</label>
+                          <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="d-grid mb-3">
+                          <a href="forgot-password.html" class="text-end"
+                            >Forgot Password?</a
+                          >
+                        </div>
+                        <div class="d-grid mb-3">
+                          <button
+                            type="button"
+                            class="btn btn-success btn-lg"
+                            disabled
+                          >
+                            Verify Your NID
+                          </button>
+                        </div>
+                        <div class="d-grid mb-3">
+                          <p class="mb-0 text-center">
+                            Don't have an account?
+                            <a href="register.html">Register</a>
+                          </p>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 d-none d-lg-block"></div>
+          </div>
+        </div>
+        <!-- Main Container Ends Here -->
+      </div>
+      <!-- Main Content Ends Here -->
+
+      <!-- Footer Starts Here -->
+      <footer>
+        <div class="container section-container">
+          <div class="footer-container">
+            <div class="company-details">
+              &copy; Copyright
+              <a href="https://www.github.com/enayetmorshedhaque"
+                >Enayet Morshed Haque</a
+              >
+              2024. All rights reserved.
+            </div>
+            <div class="legal-details">
+              <div class="legal-details-container">
+                <a href="terms-and-conditions.html">Terms and Conditions</a>
+                <div class="vertical-line"></div>
+                <a href="privacy-policy.html">Privacy Policy</a>
+              </div>
+            </div>
+            <div class="footer-logo">
+              <img
+                src="./assets/images/logo/bangladesh-railway.png"
+                alt="Bangladesh Railway Logo"
+                class="img-fluid logo"
+              />
+              <div class="footer-logo-text">
+                <h6 class="fw-bold text-uppercase">bangladesh railway</h6>
+                <p class="tag-line-text mb-0">নিরাপদ . আরামদায়ক . সাশ্রয়ী</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer Ends Here -->
+    </div>
+    <!-- Wrapper Ends Here -->
+
+    <!-- jQuery JS File -->
+    <script src="./assets/js/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap JS File -->
+    <script src="./assets/js/bootstrap-5/js/bootstrap.min.js"></script>
+
+    <!-- Popper JS CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+      integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Theme JS -->
+    <script src="./assets/js/theme/theme.js"></script>
+  </body>
+</html>

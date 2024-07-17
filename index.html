@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bangladesh Railway E-Ticketing Service</title>
+
+    <!-- Favicons -->
+    <link href="./assets/images/fav-icon/favicon.ico" rel="icon" />
+
+    <!-- Bootstrap CSS File -->
+    <link
+      rel="stylesheet"
+      href="./assets/css/bootstrap-5/css/bootstrap.min.css"
+    />
+
+    <!-- Bootstrap Icon CSS File -->
+    <link
+      rel="stylesheet"
+      href="./assets/css/bootstrap-icons/font/bootstrap-icons.css"
+    />
+
+    <!-- Fontawesome Kit -->
+    <script
+      src="https://kit.fontawesome.com/86bc96ac49.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme/theme.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar Starts Here -->
+    <header>
+      <nav class="navbar bg-white navbar-expand-lg shadow-lg">
+        <div class="container nav-container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="./assets/images/logo/bangladesh-railway.png"
+              alt="Bangladesh Railway Logo"
+              class="d-inline-block align-text-top logo"
+            />
+            bangladesh railway
+          </a>
+
+          <div id="theme-change-mobile">
+            <div class="d-flex align-items-center">
+              <button
+                class="navbar-toggler border-0 bg-transparent"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+                aria-label="Toggle navigation"
+              >
+                <i class="fa-solid fa-bars-staggered"></i>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <button
+                type="button"
+                class="btn-close custom-color"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul
+                class="navbar-nav justify-content-end flex-grow-1 align-items-center"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="login.html"
+                    >Login</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="register.html"
+                    >Register</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="train-information.html"
+                    >Train Information</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="contact-us.html"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Navigation Bar Ends Here -->
+
+    <!-- Wrapper Starts Here -->
+    <div class="wrapper">
+      <!-- Main Content Starts Here -->
+      <div class="content">
+        <!-- Hero Image Starts Here -->
+        <div class="vh-100">
+          <div class="hero-image">
+            <div class="container" id="hero-image-container">
+              <div class="search-container">
+                <div class="row">
+                  <div class="col">
+                    <div class="card border-0">
+                      <div class="px-3 py-5">
+                        <form action="">
+                          <div class="row">
+                            <div class="col-12">
+                              <p class="text-center fw-bold">
+                                Easy purchase of tickets using online payment
+                                method
+                              </p>
+                            </div>
+                          </div>
+                          <div class="row" id="first-row">
+                            <div class="col-lg-6 mb-3">
+                              <div>
+                                <label
+                                  for="fromStation"
+                                  class="form-label fw-bold"
+                                  >From</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control form-control-lg"
+                                  id="fromStation"
+                                  placeholder="Enter Starting Station"
+                                />
+                              </div>
+                            </div>
+                            <!-- <button class="btn btn-outline-primary border-0">
+                              <i class="fa-solid fa-right-left"></i>
+                            </button> -->
+                            <div class="col-lg-6 mb-3">
+                              <div>
+                                <label
+                                  for="toStation"
+                                  class="form-label fw-bold"
+                                  >To</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control form-control-lg"
+                                  id="toStation"
+                                  placeholder="Enter Destination Station"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-6 mb-3">
+                              <div>
+                                <label
+                                  for="journeyDate"
+                                  class="form-label fw-bold"
+                                  >Date of Journey</label
+                                >
+                                <input
+                                  type="date"
+                                  class="form-control form-control-lg"
+                                  id="journeyDate"
+                                  placeholder="Date of Journey"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                              <div>
+                                <label
+                                  for="selectClass"
+                                  class="form-label fw-bold"
+                                  >Choose Class</label
+                                >
+                                <select
+                                  class="form-select form-select-lg mb-3"
+                                  aria-label="Large select example"
+                                  id="selectClass"
+                                >
+                                  <option selected>Select Journey Class</option>
+                                  <option value="1">AC_B</option>
+                                  <option value="2">AC_S</option>
+                                  <option value="3">SNIGDHA</option>
+                                  <option value="4">F_BERTH</option>
+                                  <option value="5">F_SEAT</option>
+                                  <option value="6">F_CHAIR</option>
+                                  <option value="7">S_CHAIR</option>
+                                  <option value="8">SHOVON</option>
+                                  <option value="9">SHULOV</option>
+                                  <option value="10">AC_CHAIR</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="d-grid">
+                                <button
+                                  type="button"
+                                  class="btn btn-success btn-lg text-uppercase"
+                                  disabled
+                                >
+                                  search trains
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="col-lg-5 col-md-12 col-sm-12"></div>
+                  <div class="col-lg-7 d-none d-lg-block"></div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Hero Image Ends Here -->
+
+        <!-- Main Container Starts Here -->
+        <div class="container section-container">
+          <!-- Booking Steps Starts Here -->
+          <section>
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                <div class="card border-0 rounded-3 shadow-sm">
+                  <div class="steps-container">
+                    <div class="step-counter">
+                      <p class="mb-0">Step-1</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    <p class="steps-container-text mb-0">
+                      Login to the website using your mobile number and password
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                <div class="card border-0 rounded-3 shadow-sm">
+                  <div class="steps-container">
+                    <div class="step-counter">
+                      <p class="mb-0">Step-2</p>
+                    </div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p class="steps-container-text mb-0">
+                      Choose your origin, destination, journey dates and search
+                      for trains
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                <div class="card border-0 rounded-3 shadow-sm">
+                  <div class="steps-container">
+                    <div class="step-counter">
+                      <p class="mb-0">Step-3</p>
+                    </div>
+                    <i class="fa-regular fa-circle-check"></i>
+                    <p class="steps-container-text mb-0">
+                      Select your desired trip and choose your seats by sitting
+                      home
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                <div class="card border-0 rounded-3 shadow-sm">
+                  <div class="steps-container">
+                    <div class="step-counter">
+                      <p class="mb-0">Step-4</p>
+                    </div>
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                    <p class="steps-container-text mb-0">
+                      Pay for the tickets via Debit / Credit Cards or MFS and
+                      get on board
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Booking Steps Ends Here -->
+
+          <!-- Booking Section Starts Here -->
+          <section>
+            <div class="row mb-3">
+              <div class="col">
+                <h3 class="section-heading">
+                  FAQs: Common Issues and Solutions for Bangladesh Railway
+                  E-Ticketing
+                </h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="accordion accordion-flush" id="accordionFlushFaq">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed fw-bold"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-faqOne"
+                        aria-expanded="false"
+                        aria-controls="flush-faqOne"
+                      >
+                        How far in advance can I buy train tickets online?
+                      </button>
+                    </h2>
+                    <div
+                      id="flush-faqOne"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionFlushFaq"
+                    >
+                      <div class="accordion-body">
+                        Tickets can be bought online ten days in advance.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed fw-bold"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-faqTwo"
+                        aria-expanded="false"
+                        aria-controls="flush-faqTwo"
+                      >
+                        What payment methods are accepted for purchasing train
+                        tickets?
+                      </button>
+                    </h2>
+                    <div
+                      id="flush-faqTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionFlushFaq"
+                    >
+                      <div class="accordion-body">
+                        You can pay for the tickets using mobile financial
+                        services: Bkash, Nagad, Rocket, Upay, or debit/credit
+                        cards: Mastercard, Visa, DBBL Nexus. Other payment
+                        options will be available soon.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed fw-bold"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-faqThree"
+                        aria-expanded="false"
+                        aria-controls="flush-faqThree"
+                      >
+                        What should I do if there is a payment or transaction
+                        failure?
+                      </button>
+                    </h2>
+                    <div
+                      id="flush-faqThree"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionFlushFaq"
+                    >
+                      <div class="accordion-body">
+                        In case of payment or transaction failure, the deducted
+                        amount will be refunded by your bank or MFS provider
+                        within 8 business days.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed fw-bold"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-faqFour"
+                        aria-expanded="false"
+                        aria-controls="flush-faqFour"
+                      >
+                        What if money has been deducted but I haven't received a
+                        ticket confirmation?
+                      </button>
+                    </h2>
+                    <div
+                      id="flush-faqFour"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionFlushFaq"
+                    >
+                      <div class="accordion-body">
+                        If money has been deducted from your card or mobile
+                        wallet but you have not received a ticket confirmation,
+                        the deducted amount will be refunded by your bank or MFS
+                        provider within 8 business days.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed fw-bold"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-faqFive"
+                        aria-expanded="false"
+                        aria-controls="flush-faqFive"
+                      >
+                        What if I haven't received my ticket copy via email?
+                      </button>
+                    </h2>
+                    <div
+                      id="flush-faqFive"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionFlushFaq"
+                    >
+                      <div class="accordion-body">
+                        If you have not received your ticket copy in your email,
+                        kindly check your Spam or Junk folder. You can also
+                        download your ticket copy from the purchase history of
+                        your account after you log in.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed fw-bold"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-faqSix"
+                        aria-expanded="false"
+                        aria-controls="flush-faqSix"
+                      >
+                        Where can I download the official Rail Sheba app?
+                      </button>
+                    </h2>
+                    <div
+                      id="flush-faqSix"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionFlushFaq"
+                    >
+                      <div class="accordion-body">
+                        Download the official Rail Sheba app published by
+                        Bangladesh Railway from <a href="#">Google Play</a>.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed fw-bold"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-faqSeven"
+                        aria-expanded="false"
+                        aria-controls="flush-faqSeven"
+                      >
+                        What should I do if I accidentally download a fake app
+                        claiming to sell train tickets?
+                      </button>
+                    </h2>
+                    <div
+                      id="flush-faqSeven"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionFlushFaq"
+                    >
+                      <div class="accordion-body">
+                        In case of passengers downloading fake apps or any other
+                        app from Google Play which claim to sell train tickets
+                        of Bangladesh Railway, the authorities will not take any
+                        liability.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Booking Section Ends Here -->
+
+          <!-- Accepted Payment Section Starts Here -->
+          <section id="payment-section">
+            <div class="row mb-5">
+              <div class="col">
+                <h3 class="section-heading text-center">
+                  Accepted Payments Methods
+                </h3>
+              </div>
+            </div>
+
+            <div class="payment-methods">
+              <img src="./assets/images/mfs/bkash.png" alt="bKash Logo" />
+              <img src="./assets/images/mfs/Nagad.png" alt="Nagad Logo" />
+              <img
+                src="./assets/images/mfs/rocket-home.svg"
+                alt="Rocket Logo"
+              />
+              <img src="./assets/images/mfs/upay.png" alt="Upay Logo" />
+              <img src="./assets/images/mfs/Visa.png" alt="Visa Card Logo" />
+              <img
+                src="./assets/images/mfs/Mastercard.png"
+                alt="Master Card Logo"
+              />
+              <img
+                src="./assets/images/mfs/nexus-debit-home.svg"
+                alt="Nexus Card Logo"
+              />
+            </div>
+          </section>
+          <!-- Accepted Payment Section Ends Here -->
+
+          <!-- Declaration Section Starts Here -->
+          <section>
+            <p class="text-center fw-bold">
+              The tickets are issued by Bangladesh Railway Integrated Ticketing
+              System (BRITS) and Shohoz-Synesis-Vincen JV is responsible for
+              designing, development, implementation, technical operation &
+              maintenance of the system.
+            </p>
+          </section>
+          <!-- Declaration Section Ends Here -->
+        </div>
+        <!-- Main Container Ends Here -->
+      </div>
+      <!-- Main Content Ends Here -->
+
+      <!-- Footer Starts Here -->
+      <footer>
+        <div class="container section-container">
+          <div class="footer-container">
+            <div class="company-details">
+              &copy; Copyright
+              <a href="https://www.github.com/enayetmorshedhaque"
+                >Enayet Morshed Haque</a
+              >
+              2024. All rights reserved.
+            </div>
+            <div class="legal-details">
+              <div class="legal-details-container">
+                <a href="terms-and-conditions.html">Terms and Conditions</a>
+                <div class="vertical-line"></div>
+                <a href="privacy-policy.html">Privacy Policy</a>
+              </div>
+            </div>
+            <div class="footer-logo">
+              <img
+                src="./assets/images/logo/bangladesh-railway.png"
+                alt="Bangladesh Railway Logo"
+                class="img-fluid logo"
+              />
+              <div class="footer-logo-text">
+                <h6 class="fw-bold text-uppercase">bangladesh railway</h6>
+                <p class="tag-line-text mb-0">নিরাপদ . আরামদায়ক . সাশ্রয়ী</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer Ends Here -->
+    </div>
+    <!-- Wrapper Ends Here -->
+
+    <!-- jQuery JS File -->
+    <script src="./assets/js/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap JS File -->
+    <script src="./assets/js/bootstrap-5/js/bootstrap.min.js"></script>
+
+    <!-- Popper JS CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+      integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Theme JS -->
+    <script src="./assets/js/theme/theme.js"></script>
+  </body>
+</html>
